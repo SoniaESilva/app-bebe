@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Crecimiento de Gael</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img src="img/animalitos.png" alt="Animalitos del bosque" class="animalitos" />
+    <h1>Control del Bebote</h1>
+  </header>
+
+  <main>
+    <form id="formulario">
+      <label for="fecha">📅 Fecha:</label>
+      <input type="date" id="fecha" required>
+
+      <label for="peso">⚖️ Peso (kg):</label>
+      <input type="number" id="peso" step="0.1" min="0" required>
+
+      <label for="altura">📏 Altura (cm):</label>
+      <input type="number" id="altura" step="0.1" min="0" required>
+
+      <button type="submit">Agregar registro</button>
+    </form>
+
+    <section>
+      <h2>📋 Historial de crecimiento</h2>
+      <ul id="listaRegistros"></ul>
+      <div>
+        <button id="exportarJson">📁 Exportar JSON</button>
+        <button id="exportarTxt">📄 Exportar TXT</button>
+      </div>
+    </section>
+
+    <section>
+      <h2>📈 Gráfico</h2>
+      <canvas id="grafico" height="200"></canvas>
+    </section>
+  </main>
+
+  <footer>
+    Creado con 💚 para Gael – 2025
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
